@@ -5,7 +5,7 @@ metadata:
     app: weather
   name: weather
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: weather
@@ -17,7 +17,7 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - image: brainupgrade/weather:monolith
+      - image: nginx:1.17
         name: weather
         ports:
         - containerPort: 8080
