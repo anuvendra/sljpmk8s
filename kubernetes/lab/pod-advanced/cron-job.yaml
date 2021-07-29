@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: cron-job
 spec:
-  schedule: "*/5 * * * *"
+  schedule: "30 0 * 1 *"
   startingDeadlineSeconds: 60
   concurrencyPolicy: "Allow"
   jobTemplate:
